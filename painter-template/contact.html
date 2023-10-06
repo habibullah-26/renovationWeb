@@ -27,6 +27,39 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        function onFormSubmit(){
+            let contactUsForm = document.getElementById("contactUsForm");
+            let username = document.getElementById("username");
+            let email = 'Yasirali64799@gmail.com';
+            let subject = document.getElementById("subject");
+            let textMessage = document.getElementById("textMessage");
+            let mailto = 'mailto:'+ email +'?subject='+subject+'&body='+textMessage;
+            window.location.href = mailto;
+        }
+        // let contactUsForm = document.getElementById("contactUsForm");
+
+        //     contactUsForm.addEventListener("submit", (e) => {
+        //         e.preventDefault();
+
+        //         let username = document.getElementById("username");
+        //         // let password = document.getElementById("password");
+        //         console.log("userNAme : ",username.value);
+
+        //         // if (username.value == "" || password.value == "") {
+        //         //     alert("Ensure you input a value in both fields!");
+        //         // } else {
+        //         //     // perform operation with form input
+        //         //     alert("This form has been successfully submitted!");
+        //         //     console.log(
+        //         //         `This form has a username of ${username.value} and password of ${password.value}`
+        //         //     );
+
+        //         //     username.value = "";
+        //         //     password.value = "";
+        //         // }
+        //     });
+    </script>
 </head>
 
 <body>
@@ -85,7 +118,7 @@
     <!-- Contact Start -->
     <div class="container-fluid">
         <div class="container mt-5">
-            <div class="text-center mx-auto mb-3" style="">
+            <div class="text-center mx-auto mb-3">
                 <h1 class="display-5">Please Feel Free To Contact Us</h1>
                 <p class="textParagraph">We're excited to hear from you and discuss your painting project! Whether you have questions, need a quote, or want to schedule a consultation, there are several ways to reach us. We're committed to making the process of getting in touch as convenient as possible.Ready to transform your space with a fresh coat of paint or a creative wall treatment? Contact us for a free consultation and estimate. We're here to bring color, style, and life to your project.</p>
                 <hr class="w-25 mx-auto text-primary" style="opacity: 1;">
@@ -96,7 +129,7 @@
                         <div class="contact-icon p-3">
                             <div><i class="fa fa-2x fa-map-marker-alt"></i></div>
                         </div>
-                        <h4 class="mt-5">123 Street, New York, USA</h4>
+                        <h4 class="mt-5">Al Nabooda building, Office 201, Dubai</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -104,7 +137,7 @@
                         <div class="contact-icon p-3">
                             <div><i class="fa fa-2x fa-phone"></i></div>
                         </div>
-                        <h4 class="mt-5">+012 345 6789</h4>
+                        <h4 class="mt-5">+97 154 434 4927</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -112,7 +145,7 @@
                         <div class="contact-icon p-3">
                             <div><i class="fa fa-2x fa-envelope-open"></i></div>
                         </div>
-                        <h4 class="mt-5">info@example.com</h4>
+                        <h4 id="demo" class="mt-5">Yasirali64799@gmail.com</h4>
                     </div>
                 </div>
             </div>
@@ -129,22 +162,22 @@
             <div class="row justify-content-center position-relative">
                 <div class="col-lg-12">
                     <div class="mb-5 ">
-                        <form>
+                        <form id="contactUsForm">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input id="username" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input id="email" type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Subject" style="height: 55px;">
+                                    <input id="subject" type="text" class="form-control bg-light border-0" placeholder="Subject" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="5" placeholder="Message"></textarea>
+                                    <textarea id="textMessage" class="form-control bg-light border-0" rows="5" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-3">
-                                    <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-secondary w-100 py-3" type="button" onclick="onFormSubmit()">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -163,21 +196,22 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-primary">Get In Touch</h4>
                     <hr class="w-25 text-secondary mb-4" style="opacity: 1;">
-                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
-                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                    <p class="mb-4"></p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Al Nabooda building, Office 201, Dubai</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>Yasirali64799@gmail.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>0097 154 434 4927</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>0097 156 252 6045</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-primary">Our Services</h4>
                     <hr class="w-25 text-secondary mb-4" style="opacity: 1;">
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Wallpaper installation</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Painting</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Carpentry</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Wood flooring</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Carton (drywall or construction)</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Home maintenance</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Wallpaper installation</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Painting</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Carpentry</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Wood flooring</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Carton (drywall or construction)</a>
+                        <a class="text-light" href="service.html"><i class="fa fa-angle-right me-2"></i>Home maintenance</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -188,25 +222,24 @@
                         <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
                         <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
                         <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
                         <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary">Newsletter</h4>
+                    <h4 class="text-primary">Social Media</h4>
                     <hr class="w-25 text-secondary mb-4" style="opacity: 1;">
                     <form action="">
                         <div class="input-group">
                             <input type="text" class="form-control p-3 border-0" placeholder="Your Email">
-                            <button class="btn btn-primary">Sign Up</button>
+                            <button class="btn btn-primary">Follow</button>
                         </div>
                     </form>
                     <h6 class="text-primary mt-4 mb-3">Follow Us</h6>
                     <div class="d-flex">
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100070097660364&mibextid=ZbWKwL" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100070097660364&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100070097660364&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.facebook.com/profile.php?id=100070097660364&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -227,7 +260,12 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+
+    //    function myFunction() {
+    //         console.log("text : ", document.getElementById("demo"));
+    // }
+    </script>
 </body>
 
 </html>
